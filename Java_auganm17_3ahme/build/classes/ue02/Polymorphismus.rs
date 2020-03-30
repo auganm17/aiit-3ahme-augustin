@@ -1,0 +1,10 @@
+ue02.Polymorphismus
+ue01.Manager
+ue01.Angestellter
+ue02.Arbeiter
+ue02.Manager
+ue02.Angestellter
+ue01.Mitarbeiter
+ue02.Mitarbeiter
+ue01.Arbeiter
+ue01.Polymorphismus
