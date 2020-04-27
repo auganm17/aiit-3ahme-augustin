@@ -1,59 +1,55 @@
 package ue02_Rechnerklasse;
 
-
 public class Serienschaltung {
-
     private double strom;
-    private double spannung;
-    private double[] widerstandFeld;
+    private double spannung; 
+    private double[] widerstandsFeld;
 
-
-    public void updateSpannung () {
-        if (widerstandFeld == null) {
+    private void updateSpannung() {
+        if(widerstandsFeld == null) {
             spannung = 0;
-        }
-        else {
-            for (int i = 0; i < widerstandFeld.length; i++) {
-                spannung += strom * widerstandFeld[];
+        } else {
+            spannung = 0;
+            for(int i = 0; i < widerstandsFeld.length; ++i) {
+                spannung += strom * widerstandsFeld[i];
             }
         }
     }
 
-
     public void addWiderstand (double widerstandInOhm) {
-        if (widerstandFeld == null) {
-            widerstandFeld = new double[1];
-            widerstandFeld[0] = widerstandInOhm;
-        } else {
-            tmp = new double [widerstandFeld.length];
-            System.arraycopy (widerstandFeld, 0, tmp, 0, widerstandFeld.length);
-            widerstandFeld = new double [widerstandFeld.length + 1];
-            System.arraycopy (tmp, 0, widerstandFeld, 0, widerstandFeld.length);
-            widerstandFeld[widerstandFeld.length] = widerstandInOhm;
+        try {
+            if (widerstandsFeld == null) {
+                widerstandsFeld = new double[1];
+                widerstandsFeld[0] = widerstandInOhm;
+            } else {
+                double tmp[];
+                tmp = new double [widerstandsFeld.length + 1];
+                System.arraycopy (widerstandsFeld, 0, tmp, 0, widerstandsFeld.length);
+                tmp[tmp.length - 1] = widerstandInOhm;
+                widerstandsFeld = tmp;
+            }
+        } catch (Exception e) {
+            InvalidResistorValueExecption;
         }
+        
         updateSpannung();
-
     }
 
-
-    public double getStrom () {
+    public double getStrom() {
         return strom;
     }
 
-
-    public double getSpannung () {
-        return spannung;
-    }
-
-
-    public void setStrom (double strom) {
+    public void setStrom(double strom) {
         this.strom = strom;
         updateSpannung();
     }
 
+    public double getSpannung() {
+        return spannung;
+    }
 
     @Override
-    public String toString () {
+    public String toString() {
         return "Serienschaltung{" + "strom=" + strom + ", spannung=" + spannung + ", widerstandsFeld=" + widerstandsFeld + '}';
     }
 }
