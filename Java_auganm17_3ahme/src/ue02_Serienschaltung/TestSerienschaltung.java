@@ -2,7 +2,6 @@
 package ue02_Serienschaltung;
 
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class TestSerienschaltung {
     
@@ -19,6 +18,7 @@ public class TestSerienschaltung {
             if (ex instanceof InvalidResistorValueException) {
             double v = ((InvalidResistorValueException)ex).getInvalidValue();
             }
+            throw new TestFailedException(ex);
         }
         
         System.out.println("2: " + ss);
@@ -47,4 +47,12 @@ public class TestSerienschaltung {
         System.out.println("6: " + ss);
     }
 
+    public static class TestFailedException extends RuntimeException {
+
+        public TestFailedException (Throwable cause) {
+            super(cause);
+        }
+    
+    }
+    
 }
