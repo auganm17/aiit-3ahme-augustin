@@ -1,15 +1,21 @@
 package ue04_collections;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  *
  * @author auganm17
  */
-public class TestCollections {
+public class TestCollections<E> {
+    
+    private E value;
+
+
+    public TestCollections (E value) {
+        this.value = value;
+    }
+    
+    
 
     public TestCollections () {
         Double x1 = 3.14;
@@ -37,10 +43,23 @@ public class TestCollections {
         
         ArrayList l2 = (ArrayList)l1.clone();
         System.out.println("9: " + l2);
+        System.out.println("10: l1 == l2 => " + (l1 == l2));
+        System.out.println("11: " + l1.hashCode() + " " + l2.hashCode());
+        System.out.println("12: " + System.identityHashCode(l1) + " " + System.identityHashCode(l2));
+        
+        ArrayList<Double> l3 = new ArrayList<>();
+        l3.add(2.0);
+        l3.add(x1);
+        l3.add(10.0);
+        
+        ArrayList l4 = l3;
+        l4.add("Hallo");
+        System.out.println(l3);
         
     }
     
     public static void main (String[] args) {
-        new TestCollections();
+        new TestCollections<String>("Hallo");
+        new TestCollections<Double>(2.0);
     }
 }
