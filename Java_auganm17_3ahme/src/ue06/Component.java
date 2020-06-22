@@ -1,6 +1,7 @@
-package ue06;
 
-public class Component {
+package projekt_augustin;
+
+public abstract class Component {
     
     private final String id;
     private final double value;
@@ -12,42 +13,35 @@ public class Component {
         this.value = value;
     }
 
-
-    public String getId () {
+    public String getId() {
         return id;
     }
 
-
-    public double getValue () {
+    public double getValue() {
         return value;
     }
 
-
-    public double getVoltage () {
+    public double getVoltage() {
         return voltage;
     }
 
-
-    public double getCurrent () {
+    public double getCurrent() {
         return current;
     }
 
-
-    public void setVoltage (double voltage) {
+    public void setVoltage(double voltage) {
         this.voltage = voltage;
     }
 
-
-    public void setCurrent (double current) {
+    public void setCurrent(double current) {
         this.current = current;
     }
 
-
     @Override
-    public String toString () {
+    public String toString() {
         return "Component{" + "id=" + id + ", value=" + value + ", voltage=" + voltage + ", current=" + current + '}';
     }
-    
+   
     public abstract String unit ();
     
     public abstract double energy ();
