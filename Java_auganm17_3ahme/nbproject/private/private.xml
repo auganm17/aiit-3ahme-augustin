@@ -3,12 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/schueler/NetBeansProjects/projekt_Augustin/src/projekt_augustin/SerialCircuit.java</file>
-            <file>file:/home/schueler/NetBeansProjects/projekt_Augustin/src/projekt_augustin/TestSerialCircuit.java</file>
-            <file>file:/home/schueler/NetBeansProjects/projekt_Augustin/src/projekt_augustin/Component.java</file>
-            <file>file:/home/schueler/NetBeansProjects/projekt_Augustin/src/projekt_augustin/Capacitor.java</file>
-            <file>file:/home/schueler/NetBeansProjects/projekt_Augustin/src/projekt_augustin/Coil.java</file>
-            <file>file:/home/schueler/NetBeansProjects/projekt_Augustin/src/projekt_augustin/Resistor.java</file>
+            <file>file:/home/andy/Schreibtisch/Aiit/16.03.2020/Java_auganm17_3ahme/src/ue06/Capacitor.java</file>
+            <file>file:/home/andy/Schreibtisch/Aiit/16.03.2020/Java_auganm17_3ahme/src/ue06/Resistor.java</file>
+            <file>file:/home/andy/Schreibtisch/Aiit/16.03.2020/Java_auganm17_3ahme/src/ue06/TestSerialCircuit.java</file>
+            <file>file:/home/andy/Schreibtisch/Aiit/16.03.2020/Java_auganm17_3ahme/src/ue06/Coil.java</file>
+            <file>file:/home/andy/Schreibtisch/Aiit/16.03.2020/Java_auganm17_3ahme/src/ue06/SerialCircuit.java</file>
+            <file>file:/home/andy/Schreibtisch/Aiit/16.03.2020/Java_auganm17_3ahme/src/ue06/Component.java</file>
         </group>
     </open-files>
 </project-private>
