@@ -1,13 +1,12 @@
+package ue06;
 
-package projekt_augustin;
+public class Capacitor extends Component {
 
-public abstract class Capacitor extends Component{
-    
-    public Capacitor(double value) {
+    public Capacitor (double value) {
         super("C?", value);
     }
     
-    public Capacitor(String id, double value) {
+    public Capacitor (String id, double value) {
         super(id, value);
     }
 
@@ -18,7 +17,7 @@ public abstract class Capacitor extends Component{
 
     @Override
     public double energy () {
-        return super.getValue () * Math.pow (super.getVoltage(), 2) / 2;
+        return getValue() * getVoltage() * getVoltage() / 2;
     }
     
 }
